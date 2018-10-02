@@ -20,6 +20,7 @@ a cloudformation template to deploy the service
 - Install awscli tool
 - Run `aws configure` to configure the tool
 - Clone this repo and cd to it
+- Update scripts/deploy.sh with a unique bucket name
 - Create the cloudformation stack by running `$ ./scripts/deploy.sh`
 - Get the api gateway URL by running `aws cloudformation describe-stacks --stack-name apigateway | jq -r '.Stacks[0].Outputs[0]["OutputValue"]'`
 - Test the web service by sending a post request like this `curl -x POST $URL_FROM_ABOVE`
